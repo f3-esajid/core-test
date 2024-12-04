@@ -1,0 +1,9 @@
+@import 'vue-ui/dist/style.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sticky-header-helper {
+  top: -1px;
+  border-top: 1px transparent;
+}

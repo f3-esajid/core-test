@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+# code: language=ruby
+
+require 'ostruct'
+require 'yaml'
+
+@options = OpenStruct.new
+@config = nil
+
+@options.env_name = ENV['CICD_ENV_NAME']
+
+@cmd = ARGV.pop
+
+def parse_config
+  @config = YAML.load_file("#{__dir__}/../cicd.yml")
+  @env_config = @config["environments"][@options.env_name]
+end
+
+def sh(cmd, env: {})
+  puts "Running: #{cmd}"
+  ret = system(env, cmd)
+  raise "Command did not finish successfully" if ret != true
+end
+
+def build
+  vars = @env_config["env"]
+  sh("yarn run build", env: vars)
+end
+
+def sync_to_s3
+  s3_path = "s3://#{@env_config["domain_name"]}"
+  sh("aws s3 sync ./dist #{s3_path} --cache-control 'max-age=31536000' --exclude \"*.html\"")
+  sh("aws s3 sync ./dist #{s3_path} --cache-control 'no-cache'")
+end
+
+def playwright_test
+  vars = {
+    "PLAYWRIGHT_USERNAME" => "physician",
+    "PLAYWRIGHT_PASSWORD" => "Password1",
+    "PHAMILY_CORE_WEB_URL" => @env_config["env"]["VITE_CORE_WEB_URL"]
+  }
+  sh("yarn test:e2e", env: vars)
+end
+
+parse_config
+send(@cmd)

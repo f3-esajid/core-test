@@ -1,0 +1,49 @@
+name: Playwright Testing
+
+on:
+  workflow_dispatch:
+    inputs:
+      env_name:
+        description: "Kube env to push to"
+        required: true
+        default: "main"
+        type: choice
+        options:
+          - brycep24
+          - david
+          - nyc
+
+jobs:
+
+  run_playwright_test:
+    name: Run PlayWright Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: install playwright
+        run: yarn add @playwright/test
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: PlayWright Test
+        run: ./cicd/scripts/run playwright_test
+        env:
+          CICD_ENV_NAME: ${{ inputs.env_name }}
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: always() # This ensures the report is uploaded even if tests fail
+        with:
+          name: index.html
+          path: e2e/test-results/
+          retention-days: 30

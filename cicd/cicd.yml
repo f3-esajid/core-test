@@ -1,0 +1,21 @@
+environments:
+  brycep24:
+    domain_name: 'core.brycep24.phamily-dev.com'
+    env:
+      VITE_API_URL: 'https://api.brycep24.phamily-dev.com'
+      VITE_KC_SERVER_URL: 'https://auth.staging-auth.phamily-dev.com'
+      VITE_KC_REALM: 'phamily-office'
+      VITE_KC_MANAGE_CLIENT: 'manage-web'
+      VITE_KC_CORE_CLIENT: 'core-web'
+      VITE_CORE_WEB_URL: 'https://core.brycep24.phamily-dev.com'
+      VITE_MANAGE_WEB_URL: 'https://manage.brycep24.phamily-dev.com'
+  nyc:
+    domain_name: 'core.nyc.phamily-dev.com'
+    env:
+      VITE_API_URL: 'https://api.nyc.phamily-dev.com'
+      VITE_KC_SERVER_URL: 'https://auth.staging-auth.phamily-dev.com'
+      VITE_KC_REALM: 'phamily-office'
+      VITE_KC_MANAGE_CLIENT: 'manage-web'
+      VITE_KC_CORE_CLIENT: 'core-web'
+      VITE_CORE_WEB_URL: 'https://core.nyc.phamily-dev.com'
+      VITE_MANAGE_WEB_URL: 'https://manage.nyc.phamily-dev.com'
