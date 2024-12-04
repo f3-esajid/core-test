@@ -25,6 +25,7 @@ jobs:
       - name: Configure npm authentication
         run: |
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+          echo "@f3-esajid:registry=https://npm.pkg.github.com" >>~/.npmrc
 
       - name: Debug npm registry
         run: |
