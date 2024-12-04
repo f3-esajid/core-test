@@ -5,7 +5,7 @@ import CheckinLLMRefiner from '@/components/checkins/CheckinLLMRefiner.vue'
 
 // TS
 import { ref } from 'vue'
-import { useCheckin } from 'rails-api'
+import { useCheckin } from '@f3-esajid/rails-api'
 import { useGlobalStore } from '@/stores/global'
 
 // PROPS * DATA

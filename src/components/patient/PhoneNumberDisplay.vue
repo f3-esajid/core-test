@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Smartphone, BadgeCheck } from 'lucide-vue-next'
 import { Tooltip, TooltipContent, TooltipTrigger } from 'vue-ui'
-import { parseAndFormatPhone } from 'rails-api'
+import { parseAndFormatPhone } from '@f3-esajid/rails-api'
 
 defineProps<{
   value: string

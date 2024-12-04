@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // COMPONENTS
 import CheckinItem from '@/components/checkins/CheckinItem.vue'
-import type { CheckinResource } from 'rails-api'
+import type { CheckinResource } from '@f3-esajid/rails-api'
 
 // TS
 import { ref } from 'vue'

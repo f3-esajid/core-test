@@ -22,7 +22,7 @@ import PhoneNumbers from '@/components/patient/PhoneNumbers.vue'
 // TS
 import { computed, toValue, ref, type Ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { usePatient, parseAndFormatDate } from 'rails-api'
+import { usePatient, parseAndFormatDate } from '@f3-esajid/rails-api'
 
 const route = useRoute()
 const router = useRouter()

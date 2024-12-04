@@ -5,7 +5,7 @@ import ContactPointForm from './ContactPointForm.vue'
 
 // TS
 import { nextTick, onMounted, ref, type Ref } from 'vue'
-import { useContactPointCollection } from 'rails-api'
+import { useContactPointCollection } from '@f3-esajid/rails-api'
 
 // PROPS & DATA
 const props = defineProps<{

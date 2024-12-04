@@ -8,7 +8,7 @@ import CheckinFilters from '@/components/checkins/CheckinFilters.vue'
 // TS
 import { computed, ref, type Reactive } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
-import { type CheckinResource } from 'rails-api'
+import { type CheckinResource } from '@f3-esajid/rails-api'
 
 // PROPS * DATA
 const props = defineProps<{

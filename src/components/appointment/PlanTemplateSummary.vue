@@ -2,7 +2,7 @@
 // COMPONENTS
 
 // TS
-import { usePlanTemplate } from 'rails-api'
+import { usePlanTemplate } from '@f3-esajid/rails-api'
 
 const props = defineProps<{
   planKey: string

@@ -15,7 +15,7 @@ import { ChevronDown } from 'lucide-vue-next'
 import { useCheckinsStore, themes, type CheckInTheme } from '@/stores/checkins'
 import { storeToRefs } from 'pinia'
 import { useRouter } from 'vue-router'
-import { titleize } from 'rails-api'
+import { titleize } from '@f3-esajid/rails-api'
 
 // PROPS * DATA
 const router = useRouter()

@@ -3,7 +3,7 @@ import { onMounted } from 'vue'
 import { RouterView } from 'vue-router'
 
 import { TooltipProvider, Toaster } from 'vue-ui'
-import { useGlobalConfig } from 'rails-api'
+import { useGlobalConfig } from '@f3-esajid/rails-api'
 const { load: loadGlobalConfig } = useGlobalConfig()
 
 onMounted(async () => {

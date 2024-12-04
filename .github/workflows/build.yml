@@ -1,0 +1,64 @@
+name: Staging Deploy
+
+on: push
+
+jobs:
+  build_and_deploy:
+    name: Deploy to S3
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      #   with:
+      #     persist-credentials: false
+      # - name: Setup Git Credentials
+      #   #run: echo "https://git:10767d6fae6e10fffd28d1f68e1057134099a61b@github.com" > ~/.git-credentials
+      #   run: git config --global url."https://10767d6fae6e10fffd28d1f68e1057134099a61b@github.com".insteadOf "https://github.com"
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn
+
+      - name: Build
+        run: yarn run build
+      #   run: ./cicd/scripts/run build
+      #   env:
+      #     CICD_ENV_NAME: ${{ inputs.env_name }}
+
+      # - name: Sync to S3
+      #   run: ./cicd/scripts/run sync_to_s3
+      #   env:
+      #     CICD_ENV_NAME: ${{ inputs.env_name }}
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     AWS_REGION: ${{ secrets.AWS_REGION }}
+
+      #- name: Build
+      #run: yarn run build
+      #env:
+      #VITE_API_SERVER_URL: api.${{inputs.env_name}}.phamily-dev.com
+
+      #- name: "Push assets to S3 bucket"
+      #uses: Phamily/cicd-actions@p24
+      #with:
+      #tasks: "aws:sync_to_s3"
+      #aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
+      #aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #s3_bucket_name: 'my_tmp_bucket'
+      #s3_cache_policy: 'public,max-age=31536000,immutable'
+      #s3_dir_name: './dist'
+
+      #- name: "Update cache policy for index.html"
+      #uses: Phamily/cicd-actions@p24
+      #with:
+      #tasks: "aws:scp_to_s3"
+      #aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
+      #aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #s3_bucket_name: 'my_tmp_bucket'
+      #s3_cache_policy: 'public,max-age=31536000,immutable'
+      #s3_file_name: './dist/index.html'

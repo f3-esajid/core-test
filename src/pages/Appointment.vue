@@ -8,7 +8,7 @@ import PlanTemplateSummary from '@/components/appointment/PlanTemplateSummary.vu
 import { today, getLocalTimeZone, toCalendarDate } from '@internationalized/date'
 import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { useAppointmentCollection, useRouteQueryParam } from 'rails-api'
+import { useAppointmentCollection, useRouteQueryParam } from '@f3-esajid/rails-api'
 
 // PROPS * DATA
 const { load, items } = useAppointmentCollection()

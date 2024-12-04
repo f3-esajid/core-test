@@ -8,7 +8,7 @@ import CheckinMessage from '@/components/checkins/CheckinMessage.vue'
 
 // TS
 import { ref, computed } from 'vue'
-import { useCheckin } from 'rails-api'
+import { useCheckin } from '@f3-esajid/rails-api'
 // PROPS * DATA
 const props = defineProps<{
   checkinId: string

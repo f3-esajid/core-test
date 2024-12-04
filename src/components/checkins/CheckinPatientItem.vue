@@ -6,7 +6,7 @@ import CheckinPatientItemActions from '@/components/checkins/CheckinPatientItemA
 // TS
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { parseAndFormatDistanceToNow } from 'rails-api'
+import { parseAndFormatDistanceToNow } from '@f3-esajid/rails-api'
 
 // PROPS * DATA
 defineProps<{

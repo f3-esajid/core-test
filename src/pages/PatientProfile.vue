@@ -6,7 +6,7 @@ import PatientProfileLanding from '@/components/patient/PatientProfileLanding.vu
 // TS
 import { onMounted, computed } from 'vue'
 
-import { usePatient } from 'rails-api'
+import { usePatient } from '@f3-esajid/rails-api'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()

@@ -25,7 +25,7 @@ import {
 // TS
 import { computed, onMounted, onUnmounted, ref, toRefs, type Ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { usePatient, parseAndFormatDate } from 'rails-api'
+import { usePatient, parseAndFormatDate } from '@f3-esajid/rails-api'
 
 import { useExpandableScroll } from '@/composables/useExpandableScroll'
 import PhoneNumberDisplay from './PhoneNumberDisplay.vue'

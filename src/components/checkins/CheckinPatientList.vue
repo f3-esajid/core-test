@@ -6,7 +6,7 @@ import CheckinPatientTags from '@/components/checkins/CheckinPatientTags.vue'
 
 // TS
 import { ref } from 'vue'
-import { useCheckin } from 'rails-api'
+import { useCheckin } from '@f3-esajid/rails-api'
 
 // PROPS * DATA
 const props = defineProps<{

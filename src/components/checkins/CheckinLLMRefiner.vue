@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Badge } from 'vue-ui'
-import { useCheckin } from 'rails-api'
+import { useCheckin } from '@f3-esajid/rails-api'
 import { Layers } from 'lucide-vue-next'
 const props = defineProps<{
   checkinId: string

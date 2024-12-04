@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { usePractitioner, useUserContext } from 'rails-api'
+import { usePractitioner, useUserContext } from '@f3-esajid/rails-api'
 import { computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { Button, Input, ValidationFormInput } from 'vue-ui'

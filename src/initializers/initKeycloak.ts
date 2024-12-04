@@ -1,7 +1,7 @@
 import type { App } from 'vue'
 
 import { defineInitializer } from '.'
-import { KeycloakAdapter } from 'rails-api'
+import { KeycloakAdapter } from '@f3-esajid/rails-api'
 
 export default defineInitializer('initKeycloak', async (app: App) => {
   const kc = new KeycloakAdapter({

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Button } from 'vue-ui'
-import { useAccount, useInvitation } from 'rails-api'
+import { useAccount, useInvitation } from '@f3-esajid/rails-api'
 import { onMounted, computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { setLocalAccount } from '@/utils'

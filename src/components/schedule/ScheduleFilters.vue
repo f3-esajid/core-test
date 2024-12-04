@@ -4,7 +4,7 @@ import AppointmentFilterBtn from '@/components/appointment/AppointmentFilterBtn.
 
 // TS
 import { useRouter } from 'vue-router'
-import { useRouteQueryParam } from 'rails-api'
+import { useRouteQueryParam } from '@f3-esajid/rails-api'
 
 // PROPS * DATA
 const router = useRouter()

@@ -7,7 +7,7 @@ import {
   type RouterOptions,
   type RouteRecordRaw
 } from 'vue-router'
-import { useUserContext, type APIResult, deparam, urlParam } from 'rails-api'
+import { useUserContext, type APIResult, deparam, urlParam } from '@f3-esajid/rails-api'
 import { useGlobalStore } from '@/stores/global'
 import { storeToRefs } from 'pinia'
 import { setLocalAccount } from '@/utils'

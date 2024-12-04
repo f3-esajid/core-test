@@ -9,7 +9,7 @@ import { watch, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { useCheckinsStore } from '@/stores/checkins'
-import { useCheckinCollection, useRouteQueryParam } from 'rails-api'
+import { useCheckinCollection, useRouteQueryParam } from '@f3-esajid/rails-api'
 
 // PROPS * DATA
 const route = useRoute()

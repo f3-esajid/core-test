@@ -5,7 +5,7 @@ import AppointmentFilters from '@/components/appointment/AppointmentFilters.vue'
 // TS
 import { ref } from 'vue'
 import { useIntersectionObserver } from '@vueuse/core'
-import { usePlanTemplate } from 'rails-api'
+import { usePlanTemplate } from '@f3-esajid/rails-api'
 // PROPS * DATA
 const props = defineProps<{
   planKey: string

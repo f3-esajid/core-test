@@ -5,7 +5,7 @@ import ScheduleItem from '@/components/schedule/ScheduleItem.vue'
 // TS
 import { computed, onMounted, ref, type Reactive } from 'vue'
 import { partition } from 'lodash'
-import { useRouteQueryParam, type PlanBasedAppointmentGroupResource } from 'rails-api'
+import { useRouteQueryParam, type PlanBasedAppointmentGroupResource } from '@f3-esajid/rails-api'
 import { useRouter } from 'vue-router'
 
 // PROPS * DATA

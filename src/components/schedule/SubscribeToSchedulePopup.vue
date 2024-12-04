@@ -2,7 +2,7 @@
 import { ref, watch } from 'vue'
 import { Input, MenubarItem, Skeleton } from 'vue-ui'
 import { Search } from 'lucide-vue-next'
-import { usePractitionerCollection } from 'rails-api'
+import { usePractitionerCollection } from '@f3-esajid/rails-api'
 import { useDebounceFn } from '@vueuse/core'
 import { useRouter } from 'vue-router'
 

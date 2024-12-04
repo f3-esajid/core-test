@@ -1,5 +1,5 @@
 import { defineInitializer } from '.'
-import { apiNotify } from 'rails-api'
+import { apiNotify } from '@f3-esajid/rails-api'
 import { toast } from 'vue-ui'
 
 export default defineInitializer('initApiNotify', async () => {

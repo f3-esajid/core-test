@@ -7,7 +7,7 @@ import {
   addDefaultHeaders,
   addBearerAuthInterceptor,
   handle401Interceptor
-} from 'rails-api'
+} from '@f3-esajid/rails-api'
 import { useGlobalStore } from '@/stores/global'
 import { storeToRefs } from 'pinia'
 

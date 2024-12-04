@@ -2,7 +2,7 @@ import { type RouteRecordName } from 'vue-router'
 import { computed } from 'vue'
 import { defineStore } from 'pinia'
 import { CalendarRange, FileText, Inbox, Users } from 'lucide-vue-next'
-import { useUserContext } from 'rails-api'
+import { useUserContext } from '@f3-esajid/rails-api'
 
 const { selected_account } = useUserContext('user_context_id')
 const personaId = computed(() => {

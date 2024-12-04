@@ -5,7 +5,7 @@ import AppointmentItem from '@/components/appointment/AppointmentItem.vue'
 
 // TS
 import { type Reactive } from 'vue'
-import type { AppointmentResource } from 'rails-api'
+import type { AppointmentResource } from '@f3-esajid/rails-api'
 
 // PROPS * DATA
 defineProps<{

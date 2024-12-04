@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { MenubarItem } from 'vue-ui'
-import { useAccount } from 'rails-api'
+import { useAccount } from '@f3-esajid/rails-api'
 import { useRouter } from 'vue-router'
 import { computed } from 'vue'
 

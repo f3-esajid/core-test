@@ -22,7 +22,7 @@ import { BadgeCheck, Star, Trash } from 'lucide-vue-next'
 // TS
 import { ref, computed, toValue, type Ref } from 'vue'
 
-import { usePatient, useContactPoint, type APIResult } from 'rails-api'
+import { usePatient, useContactPoint, type APIResult } from '@f3-esajid/rails-api'
 
 // PROPS & DATA
 const emits = defineEmits<{

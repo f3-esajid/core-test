@@ -15,7 +15,7 @@ import { Button, Progress, Tooltip, TooltipContent, TooltipTrigger } from 'vue-u
 
 // TS
 import { computed } from 'vue'
-import { usePlanBasedAppointmentGroup } from 'rails-api'
+import { usePlanBasedAppointmentGroup } from '@f3-esajid/rails-api'
 import { useRoute, useRouter, type RouteLocationRaw } from 'vue-router'
 
 // PROPS * DATA

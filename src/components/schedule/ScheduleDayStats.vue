@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, DonutChart, Tooltip, TooltipTrigger, TooltipCon
 // TS
 import { computed } from 'vue'
 import { parse, format, isToday, isWeekend } from 'date-fns'
-import { parseAndFormatDate } from 'rails-api'
+import { parseAndFormatDate } from '@f3-esajid/rails-api'
 import { getLocalTimeZone, today } from '@internationalized/date'
 // PROPS * DATA
 const props = defineProps<{

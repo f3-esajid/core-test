@@ -4,7 +4,7 @@ import { Award } from 'lucide-vue-next'
 import { Progress } from 'vue-ui'
 
 // TS
-import { usePatient } from 'rails-api'
+import { usePatient } from '@f3-esajid/rails-api'
 import { computed } from 'vue'
 
 // PROPS * DATA

@@ -9,7 +9,7 @@ import { parse, isToday } from 'date-fns'
 import { today, getLocalTimeZone, toCalendarDate } from '@internationalized/date'
 import { computed, watch, ref } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { usePlanBasedAppointmentGroupCollection, useRouteQueryParam } from 'rails-api'
+import { usePlanBasedAppointmentGroupCollection, useRouteQueryParam } from '@f3-esajid/rails-api'
 
 // PROPS * DATA
 const route = useRoute()

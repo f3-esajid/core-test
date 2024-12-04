@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useUserContext } from 'rails-api'
+import { useUserContext } from '@f3-esajid/rails-api'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 

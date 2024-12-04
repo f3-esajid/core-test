@@ -9,7 +9,7 @@ import { today, getLocalTimeZone } from '@internationalized/date'
 import { subDays } from 'date-fns'
 import { computed, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { useDateBasedAppointmentGroupCollection } from 'rails-api'
+import { useDateBasedAppointmentGroupCollection } from '@f3-esajid/rails-api'
 
 // PROPS * DATA
 

@@ -1,7 +1,7 @@
 import { computed, ref } from 'vue'
 import { defineStore } from 'pinia'
 
-import { useGlobalConfig } from 'rails-api'
+import { useGlobalConfig } from '@f3-esajid/rails-api'
 
 export const useGlobalStore = defineStore('global', () => {
   const currentOrgId = ref('')

@@ -2,7 +2,7 @@
 import { inject, computed } from 'vue'
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from 'vue-ui'
 const kcAdapter: any = inject('keycloakAdapter')
-import { useUserContext } from 'rails-api'
+import { useUserContext } from '@f3-esajid/rails-api'
 import AccountItem from '@/components/navigation/AccountItem.vue'
 import { InitialCircle } from 'vue-ui'
 

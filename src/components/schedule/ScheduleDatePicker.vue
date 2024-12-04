@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-vue-next'
 
 // TS
 import { computed } from 'vue'
-import { useRouteQueryParam } from 'rails-api'
+import { useRouteQueryParam } from '@f3-esajid/rails-api'
 import { today, getLocalTimeZone, toCalendarDate, parseDate } from '@internationalized/date'
 import { useRouter } from 'vue-router'
 

@@ -7,7 +7,7 @@ import MiniCarePlanProgress from '@/components/patient/MiniCarePlanProgress.vue'
 // TS
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { parseAndFormatDistanceToNow } from 'rails-api'
+import { parseAndFormatDistanceToNow } from '@f3-esajid/rails-api'
 
 // PROPS * DATA
 const props = defineProps<{
