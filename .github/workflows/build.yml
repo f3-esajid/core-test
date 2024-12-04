@@ -1,6 +1,8 @@
-name: Staging Deploy
+name: build
 
-on: push
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
   build_and_deploy:
