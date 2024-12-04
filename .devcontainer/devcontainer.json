@@ -1,0 +1,80 @@
+{
+  "name": "core-test",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "mono",
+  "workspaceFolder": "/leviathan",
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["README.md"],
+      "repositories": {
+        "Phamily/*": {
+          "permissions": "write-all"
+        }
+      }
+    },
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "files.trimTrailingWhitespace": true,
+        "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+        //"editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+        "eslint.validate": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "vue"
+        ],
+        "codestream.serverUrl": "https://api.codestream.com",
+        "search.followSymlinks": false
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "ms-vsliveshare.vsliveshare-pack",
+        "ms-playwright.playwright",
+        "esbenp.prettier-vscode",
+        "Gruntfuggly.triggertaskonsave",
+        "Shopify.ruby-lsp",
+        "Vue.volar",
+        "EditorConfig.EditorConfig",
+        "jakebecker.elixir-ls",
+        "hashicorp.terraform",
+        "eamodio.gitlens"
+      ]
+    }
+  },
+  //"postCreateCommand": "bundle && bundle exec rake db:prepare && yarn --cwd frontend && yarn --cwd frontend/engines/provider && yarn --cwd frontend/engines/my && yarn --cwd frontend/engines/manage && touch tmp/.setup-complete",
+  "remoteUser": "vscode",
+  "forwardPorts": [8080, 3000, 5173, 5174],
+  "portsAttributes": {
+    "8080": {
+      "label": "API",
+      "visibility": "public",
+      "onAutoForward": "ignore"
+    },
+    "3000": {
+      "label": "API",
+      "visibility": "public",
+      "onAutoForward": "ignore"
+    },
+    "5173": {
+      "label": "Core Web",
+      "visibility": "public"
+    },
+    "5174": {
+      "label": "Manage Web",
+      "visibility": "public"
+    }
+  },
+  "secrets": {
+    "PHAMILY_BENGAL_URL": {
+      "description": "URL of the Bengal server. If you are developing on codespaces should look something like: https://<some>-<words>-<UID>-4000.app.github.dev"
+    }
+  },
+  "containerEnv": {
+    "LEVIATHAN_AWS_REGION": "${localEnv:LEVIATHAN_AWS_REGION}",
+    "LEVIATHAN_AWS_ACCESS_KEY_ID": "${localEnv:LEVIATHAN_AWS_ACCESS_KEY_ID}",
+    "LEVIATHAN_AWS_SECRET_ACCESS_KEY": "${localEnv:LEVIATHAN_AWS_SECRET_ACCESS_KEY}"
+  }
+}
